@@ -29,7 +29,7 @@ The following are the parameters present in cloudformation template
     CidrIp: CIDR for allowing inbound connections to ICAP server (Ports: 22,1344,1355,443,7000)
 ```
 
-## Create stack of  Loadbalancers & Instances
+## Create stack of  Load balancers & Instances
 ### Method 1:  AWS CLI
 
 - Clone the repo 
@@ -115,3 +115,12 @@ in us-east-2 creating 2 servers mapped to elastic ip YOUR_ALLOCATION_ID
 ![parameters](https://user-images.githubusercontent.com/60857664/107666135-d9ce4400-6c96-11eb-8c05-c54b6aa3d788.png)
 
 - For the next page, leave everything at default, review and create stack
+
+### Changes you will have in your AWS account:
+- The declared number of instances will be created and running
+- A load balancer will be created to manage the traffic of the instances
+- A Security Group will be created for the instances with its inbound rules
+- Network interfaces will be created and attached to the instances 
+- A Virtual Private Cloud (VPC) will be created to enable you to launch AWS resources
+- Subnets will be created
+- Auto Scaling groups and lunch configurations
